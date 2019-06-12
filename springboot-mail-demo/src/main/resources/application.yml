@@ -1,0 +1,9 @@
+spring:
+  # java 邮件服务
+  mail:
+    host: smtp.qq.com
+    username: 1241916209@qq.com
+    # 这里的密码不是邮箱的登录密码,而是邮箱的授权码,使用程序发送邮件取得授权码,在邮箱设置里获取
+    password: vzdfasrqlbabefa
+    default-encoding: UTF-8
+    protocol: smtp
