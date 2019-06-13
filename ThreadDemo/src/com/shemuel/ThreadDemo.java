@@ -6,7 +6,7 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * @Author: dengshaoxiang
  * @Date: 2019/6/11 15:46
- * @Description:
+ * @Description: 多线程模拟售票
  */
 public class ThreadDemo {
     public static void main(String[] args) {
@@ -19,7 +19,7 @@ public class ThreadDemo {
 class MyTicket implements Runnable{
     private Lock lock = new ReentrantLock();
     // 一百张票
-    private int ticket = 100;
+    private int ticket = 1000;
     @Override
     public void run() {
         while (true) {
@@ -27,7 +27,7 @@ class MyTicket implements Runnable{
             try {
                 if (ticket > 0) {
                     try {
-                        Thread.sleep(50);
+                        Thread.sleep(300);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -39,3 +39,4 @@ class MyTicket implements Runnable{
         }
     }
 }
+
