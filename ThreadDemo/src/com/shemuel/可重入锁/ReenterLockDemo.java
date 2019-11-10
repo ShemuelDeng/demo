@@ -1,5 +1,7 @@
 package com.shemuel.可重入锁;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -14,6 +16,7 @@ public class ReenterLockDemo {
 
 
     public static void main(String[] args) {
+
         Phone phone = new Phone();
         new Thread(()->phone.sendSms(),"1").start();
         new Thread(()->phone.sendSms(),"2").start();

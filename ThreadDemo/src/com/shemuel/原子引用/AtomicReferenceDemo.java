@@ -1,3 +1,5 @@
+package com.shemuel.原子引用;
+
 import com.shemuel.bean.User;
 
 import java.util.concurrent.atomic.AtomicReference;

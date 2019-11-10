@@ -1,4 +1,4 @@
-package com.shemuel;
+package com.shemuel.读写锁;
 
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
@@ -34,7 +34,7 @@ class ReadWriteLockDemo{
 		lock.readLock().lock(); //上锁
 		
 		try{
-			System.out.println(Thread.currentThread().getName() + " : " + number);
+			System.out.println(Thread.currentThread().getName() + "get : " + number);
 		}finally{
 			lock.readLock().unlock(); //释放锁
 		}

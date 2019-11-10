@@ -1,8 +1,4 @@
-package com.shemuel;
-
-import java.util.concurrent.locks.Condition;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
+package com.shemuel.生产者消费者;
 
 /**
  * @Author: dengshaoxiang

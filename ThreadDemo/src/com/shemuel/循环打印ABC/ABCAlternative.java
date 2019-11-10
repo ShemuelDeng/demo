@@ -1,4 +1,4 @@
-package com.shemuel;
+package com.shemuel.循环打印ABC;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;

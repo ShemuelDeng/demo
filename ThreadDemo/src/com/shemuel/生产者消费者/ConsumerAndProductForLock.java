@@ -1,4 +1,4 @@
-package com.shemuel;
+package com.shemuel.生产者消费者;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
