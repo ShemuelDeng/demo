@@ -5,7 +5,7 @@ import java.util.concurrent.SynchronousQueue;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 单元素的队列
+ * 单元素的队列,每一个put操作 都要等待一个take操作
  * 同步队列
  */
 public class SychronousBlockingQueueDemo {

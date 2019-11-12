@@ -42,7 +42,7 @@ class Loop {
     public void loopA(int series) {
         lock.lock();
         try {
-            if (number != 1){
+            while (number != 1){
                 condition.await();
             }
             System.out.println(Thread.currentThread().getName()+ "第"+series+"轮打印"+"      A");
@@ -58,7 +58,7 @@ class Loop {
     public void loopB(int series) {
         lock.lock();
         try {
-            if (number != 2){
+            while (number != 2){
                 condition2.await();
             }
             System.out.println(Thread.currentThread().getName()+ "第"+series+"轮打印"+"      B");
@@ -75,7 +75,7 @@ class Loop {
     public void loopC(int series) {
         lock.lock();
         try {
-            if (number != 3){
+            while (number != 3){
                 condition3.await();
             }
             System.out.println(Thread.currentThread().getName()+ "第"+series+"轮打印"+"      C");

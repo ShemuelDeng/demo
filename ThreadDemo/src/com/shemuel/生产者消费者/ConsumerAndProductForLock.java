@@ -17,10 +17,18 @@ public class ConsumerAndProductForLock {
 
 
         new Thread(productor,"生产者").start();
-//        new Thread(productor,"生产者").start();
-//
-//        new Thread(consumer,"消费者").start();
+        new Thread(productor,"生产者").start();
+
         new Thread(consumer,"消费者").start();
+        new Thread(consumer,"消费者").start();
+
+        int sum = 0;
+        int i = 1;
+        while (i<=100){
+            sum+=i;
+            i += 1;
+        }
+        System.out.println(sum);
     }
 
 }
@@ -40,7 +48,7 @@ class Clerk1 {
         lock.lock();
         // 当出现两个生产者两个消费者,会出现虚假唤醒,因此,this.wait应该用在循环while中
         try {
-            if (product <= 0){
+            while (product <= 0){
                 System.out.println("缺货");
                 try {
                     condition.await();
@@ -59,7 +67,7 @@ class Clerk1 {
     public void buy() {
         lock.lock();
         try {
-            if (product >= 10){ // 最大库存量
+            while (product >= 10){ // 最大库存量
                 System.out.println("货满");
                 try {
                     condition.await();
