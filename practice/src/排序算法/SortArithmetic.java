@@ -115,6 +115,7 @@ public class SortArithmetic {
     }
 
     public static void main(String[] args) {
+
         int[] test = {9,8,7,6,5,4,1,1,3};
         for (int i : shellSort(test)) {
             System.out.print(i+"\t");

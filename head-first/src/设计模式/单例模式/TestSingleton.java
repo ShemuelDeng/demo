@@ -1,4 +1,4 @@
-package 单例模式;
+package 设计模式.单例模式;
 
 import java.lang.reflect.Constructor;
 
@@ -16,5 +16,7 @@ public class TestSingleton {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+
     }
 }
