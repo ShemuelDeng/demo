@@ -32,7 +32,7 @@ class ReadWriteLockDemo{
 	//读
 	public void get(){
 		lock.readLock().lock(); //上锁
-		
+
 		try{
 			System.out.println(Thread.currentThread().getName() + "get : " + number);
 		}finally{
@@ -43,7 +43,7 @@ class ReadWriteLockDemo{
 	//写
 	public void set(int number){
 		lock.writeLock().lock();
-		
+
 		try{
 			System.out.println(Thread.currentThread().getName());
 			this.number = number;

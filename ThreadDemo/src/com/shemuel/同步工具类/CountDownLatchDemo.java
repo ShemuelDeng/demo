@@ -17,8 +17,9 @@ public class CountDownLatchDemo {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println("线程一执行完毕");
+            System.out.println("线程一开始执行");
             countDownLatch.countDown();// 减1
+            System.out.println("线程一继续执行");
         },"线程1").start();
         new Thread(()->{
             try {
@@ -26,8 +27,9 @@ public class CountDownLatchDemo {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println("线程二执行完毕");
+            System.out.println("线程二开始执行");
             countDownLatch.countDown();// 减1
+            System.out.println("线程二继续执行");
         },"线程2").start();
 
         System.out.println("等待其他两个线程执行完毕....");

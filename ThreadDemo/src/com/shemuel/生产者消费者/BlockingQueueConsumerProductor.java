@@ -46,8 +46,9 @@ public class BlockingQueueConsumerProductor {
         }
     }
 }
-class ShareSource{
+class  ShareSource{
     private static volatile boolean flag = true;
+
 
     private AtomicInteger atomicInteger = new AtomicInteger(1);
 

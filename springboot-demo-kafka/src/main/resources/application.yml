@@ -1,0 +1,23 @@
+server:
+  port: 80
+spring:
+  # kakfa
+  kafka:
+    bootstrap-servers: 192.168.137.132:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      properties:
+        interceptor:
+          classes: com.shemuel.kafka.interceptor.MyKafkaInterceptor
+    consumer:
+      group-id: default_consumer_group #群组ID
+      enable-auto-commit: true
+      auto-commit-interval: 1000
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    listener:
+      missing-topics-fatal: false
+logging:
+  level:
+    root: info

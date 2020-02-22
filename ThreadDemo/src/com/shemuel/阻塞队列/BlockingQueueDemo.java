@@ -2,6 +2,8 @@ package com.shemuel.阻塞队列;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingDeque;
+import java.util.concurrent.LinkedBlockingQueue;
 
 public class BlockingQueueDemo {
     public static void main(String[] args) {
@@ -49,6 +51,5 @@ public class BlockingQueueDemo {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
     }
 }
